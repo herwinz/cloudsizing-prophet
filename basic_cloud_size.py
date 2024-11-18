@@ -20,13 +20,22 @@ dummy_data = pd.DataFrame({
 
 # Data referensi Azure App Service Plans
 azure_tiers = pd.DataFrame([
-    {"Name": "Free F1", "CPU": "60", "Memory": "N/A", "Scale": 1},
-    {"Name": "Basic B1", "CPU": "100", "Memory": "1.75", "Scale": 3},
-    {"Name": "Basic B2", "CPU": "100", "Memory": "3.5", "Scale": 3},
-    {"Name": "Basic B3", "CPU": "100", "Memory": "7", "Scale": 3},
-    {"Name": "Premium v2 P1V2", "CPU": "210", "Memory": "3.5", "Scale": 30},
-    {"Name": "Premium v2 P2V2", "CPU": "210", "Memory": "7", "Scale": 30},
-    {"Name": "Premium v2 P3V2", "CPU": "210", "Memory": "14", "Scale": 30},
+    {"Type": "Dev/test", "Name": "Free F1", "CPU": "60 minutes/day", "Memory": "N/A", "Remote Storage (GB)": 1, "Scale": "N/A", "SLA": "N/A", "Cost per hour (USD)": "Free"},
+    {"Type": "Dev/test", "Name": "Basic B1", "CPU": 100, "Memory": 1.75, "Remote Storage (GB)": 10, "Scale": 3, "SLA": 99.95, "Cost per hour (USD)": 0.018},
+    {"Type": "Dev/test", "Name": "Basic B2", "CPU": 100, "Memory": 3.5, "Remote Storage (GB)": 10, "Scale": 3, "SLA": 99.95, "Cost per hour (USD)": 0.036},
+    {"Type": "Dev/test", "Name": "Basic B3", "CPU": 100, "Memory": 7, "Remote Storage (GB)": 10, "Scale": 3, "SLA": 99.95, "Cost per hour (USD)": 0.071},
+    {"Type": "Production", "Name": "Premium v3 P5mv3", "CPU": 195, "Memory": 32, "Remote Storage (GB)": 250, "Scale": 30, "SLA": 99.95, "Cost per hour (USD)": 3.418},
+    {"Type": "Production", "Name": "Premium v3 P4mv3", "CPU": 195, "Memory": 16, "Remote Storage (GB)": 250, "Scale": 30, "SLA": 99.95, "Cost per hour (USD)": 1.709},
+    {"Type": "Production", "Name": "Premium v3 P3mv3", "CPU": 195, "Memory": 8, "Remote Storage (GB)": 250, "Scale": 30, "SLA": 99.95, "Cost per hour (USD)": 0.854},
+    {"Type": "Production", "Name": "Premium v3 P2mv3", "CPU": 195, "Memory": 4, "Remote Storage (GB)": 250, "Scale": 30, "SLA": 99.95, "Cost per hour (USD)": 0.427},
+    {"Type": "Production", "Name": "Premium v3 P1mv3", "CPU": 195, "Memory": 2, "Remote Storage (GB)": 250, "Scale": 30, "SLA": 99.95, "Cost per hour (USD)": 0.214},
+    {"Type": "Production", "Name": "Premium v3 P0mv3", "CPU": 195, "Memory": 1, "Remote Storage (GB)": 250, "Scale": 30, "SLA": 99.95, "Cost per hour (USD)": 0.089},
+    {"Type": "Legacy", "Name": "Standard S3", "CPU": 100, "Memory": 4, "Remote Storage (GB)": 50, "Scale": 10, "SLA": 99.95, "Cost per hour (USD)": 0.38},
+    {"Type": "Legacy", "Name": "Standard S2", "CPU": 100, "Memory": 3.5, "Remote Storage (GB)": 50, "Scale": 10, "SLA": 99.95, "Cost per hour (USD)": 0.19},
+    {"Type": "Legacy", "Name": "Standard S1", "CPU": 100, "Memory": 1.75, "Remote Storage (GB)": 50, "Scale": 10, "SLA": 99.95, "Cost per hour (USD)": 0.095},
+    {"Type": "Legacy", "Name": "Premium v2 P3V2", "CPU": 210, "Memory": 14, "Remote Storage (GB)": 250, "Scale": 30, "SLA": 99.95, "Cost per hour (USD)": 0.462},
+    {"Type": "Legacy", "Name": "Premium v2 P2V2", "CPU": 210, "Memory": 7, "Remote Storage (GB)": 250, "Scale": 30, "SLA": 99.95, "Cost per hour (USD)": 0.231},
+    {"Type": "Legacy", "Name": "Premium v2 P1V2", "CPU": 210, "Memory": 3.5, "Remote Storage (GB)": 250, "Scale": 30, "SLA": 99.95, "Cost per hour (USD)": 0.115}
 ])
 
 # Pastikan semua kolom `CPU` dan `Memory` adalah angka
