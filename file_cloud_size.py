@@ -3,12 +3,10 @@ from prophet import Prophet
 import matplotlib.pyplot as plt
 
 # Membaca data dari file Excel
-# file_path = "Azure_App_Service_Data_Filled.xlsx"
 file_path = "Azure_App_Service_Data_Adjusted.xlsx"
 
 # Membaca data historis
-historical_data = pd.read_excel(file_path, sheet_name="Historical Data")
-# historical_data = pd.read_excel(file_path, sheet_name="Historical_B1")
+historical_data = pd.read_excel(file_path, sheet_name="DATA_B")
 print("Data Historis:")
 print(historical_data.head())
 
